@@ -67,7 +67,7 @@
           <div class="floating floating-star">★</div>
           <div class="floating floating-leaf">☘</div>
           <div class="portrait-frame">
-            <img src="./img/photo_main.jpg" alt="Точилкина Ольга Сергеевна">
+            <img src="./img/photo_main.jpg" alt="Точилкина Ольга Сергеевна" fetchpriority="high" decoding="async">
           </div>
           <div class="portrait-back"></div>
         </div>
@@ -512,30 +512,36 @@
 
         <div class="group-gallery" aria-label="Фотографии помещений группы">
           <a class="group-photo group-photo-large reveal" href="./photos/group/1000044638.jpg" target="_blank"><img
-              src="./photos/group/1000044638.jpg" alt="Игровое пространство группы" loading="lazy"><span>Игровая
+              src="./photos/group/1000044638.jpg" alt="Игровое пространство группы" loading="lazy"
+              decoding="async"><span>Игровая
               зона</span></a>
           <a class="group-photo reveal delay-100" href="./photos/group/1000044639.jpg" target="_blank"><img
-              src="./photos/group/1000044639.jpg" alt="Развивающая среда группы" loading="lazy"><span>Развивающая
+              src="./photos/group/1000044639.jpg" alt="Развивающая среда группы" loading="lazy"
+              decoding="async"><span>Развивающая
               среда</span></a>
           <a class="group-photo reveal delay-200" href="./photos/group/1000044640.jpg" target="_blank"><img
-              src="./photos/group/1000044640.jpg" alt="Материалы для занятий" loading="lazy"><span>Материалы для
+              src="./photos/group/1000044640.jpg" alt="Материалы для занятий" loading="lazy"
+              decoding="async"><span>Материалы для
               занятий</span></a>
           <a class="group-photo reveal" href="./photos/group/1000044641.jpg" target="_blank"><img
-              src="./photos/group/1000044641.jpg" alt="Уголок группы" loading="lazy"><span>Уютный уголок</span></a>
+              src="./photos/group/1000044641.jpg" alt="Уголок группы" loading="lazy" decoding="async"><span>Уютный
+              уголок</span></a>
           <a class="group-photo reveal delay-100" href="./photos/group/1000044642.jpg" target="_blank"><img
               src="./photos/group/1000044642.jpg" alt="Зона самостоятельной деятельности"
-              loading="lazy"><span>Самостоятельная деятельность</span></a>
+              loading="lazy" decoding="async"><span>Самостоятельная деятельность</span></a>
           <a class="group-photo group-photo-wide reveal delay-200" href="./photos/group/1000044643.jpg"
             target="_blank"><img src="./photos/group/1000044643.jpg" alt="Помещение группы"
-              loading="lazy"><span>Пространство группы</span></a>
+              loading="lazy" decoding="async"><span>Пространство группы</span></a>
           <a class="group-photo reveal" href="./photos/group/1000044644.jpg" target="_blank"><img
-              src="./photos/group/1000044644.jpg" alt="Игровые и учебные материалы" loading="lazy"><span>Игровые
+              src="./photos/group/1000044644.jpg" alt="Игровые и учебные материалы" loading="lazy"
+              decoding="async"><span>Игровые
               материалы</span></a>
           <a class="group-photo reveal delay-100" href="./photos/group/1000044645.jpg" target="_blank"><img
               src="./photos/group/1000044645.jpg" alt="Оформление помещения группы"
-              loading="lazy"><span>Оформление</span></a>
+              loading="lazy" decoding="async"><span>Оформление</span></a>
           <a class="group-photo reveal delay-200" href="./photos/group/1000044646.jpg" target="_blank"><img
-              src="./photos/group/1000044646.jpg" alt="Детское пространство группы" loading="lazy"><span>Детское
+              src="./photos/group/1000044646.jpg" alt="Детское пространство группы" loading="lazy"
+              decoding="async"><span>Детское
               пространство</span></a>
         </div>
       </div>
@@ -607,10 +613,11 @@
         <form class="contact-form reveal delay-100" action="https://formsubmit.co/oliako4neva@yandex.ru" method="POST">
           <input type="hidden" name="_subject" value="Новое сообщение с сайта Точилкиной Ольги Сергеевны">
           <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display: none;">
           <h3>Написать сообщение</h3><label>Ваше имя<input type="text" name="name" required
               placeholder="Анна Иванова"></label><label>Email<input type="email" name="email" required
               placeholder="anna@example.com"></label><label>Тема<select name="topic" required>
-              <option selected disabled>Выберите тему</option>
+              <option value="" selected disabled>Выберите тему</option>
               <option>Консультация</option>
               <option>Вопрос о развитии</option>
               <option>Другое</option>

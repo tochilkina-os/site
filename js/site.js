@@ -289,9 +289,13 @@ function setupHorizontalCarousel(viewportId, previousSelector, nextSelector, car
       return viewport.clientWidth;
     }
 
-    const styles = window.getComputedStyle(firstCard);
-    const margin = Number.parseFloat(styles.marginRight) || 0;
-    return firstCard.getBoundingClientRect().width + margin + 28;
+    const track = firstCard.parentElement;
+    const trackStyles = track ? window.getComputedStyle(track) : null;
+    const cardStyles = window.getComputedStyle(firstCard);
+    const columnGap = trackStyles ? Number.parseFloat(trackStyles.columnGap) || 0 : 0;
+    const margin = Number.parseFloat(cardStyles.marginRight) || 0;
+
+    return firstCard.getBoundingClientRect().width + margin + columnGap;
   };
 
   previousButton.addEventListener("click", () => {
@@ -311,6 +315,22 @@ function setupEducationReportsCarousel() {
   setupHorizontalCarousel("education-reports-carousel", "[data-education-prev]", "[data-education-next]", ".education-report-card");
 }
 
+function setupContactFormConfirmation() {
+  const form = document.querySelector(".contact-form");
+
+  if (!form) {
+    return;
+  }
+
+  form.addEventListener("submit", (event) => {
+    const isConfirmed = window.confirm("Отправить сообщение Ольге Сергеевне?");
+
+    if (!isConfirmed) {
+      event.preventDefault();
+    }
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   setupHeader();
   setupMobileMenu();
@@ -318,6 +338,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupCertificatesCarousel();
   setupEducationReportsCarousel();
   setupRevealAnimation();
+  setupContactFormConfirmation();
 });
 
 window.addEventListener("resize", () => {
