@@ -1,0 +1,92 @@
+{
+  "items": [
+    {
+      "title": "Подготовка участников выставки «Семейный оберег»",
+      "category": "Благодарность",
+      "file": "./awards/Благодарность за подготовку участников выставки Семейный оберег.pdf",
+      "icon": "hands-praying",
+      "order": 10,
+      "visible": true
+    },
+    {
+      "title": "Конкурс творчества «Грибное лукошко»",
+      "category": "Грамота",
+      "file": "./awards/Грамота Конкурс творчества Грибное лукошко.pdf",
+      "icon": "plant",
+      "order": 20,
+      "visible": true
+    },
+    {
+      "title": "Педагогический конкурс «Театр в чемодане»",
+      "category": "Грамота",
+      "file": "./awards/Грамота Педагогический конкурс Театр в чемодане.pdf",
+      "icon": "mask-happy",
+      "order": 30,
+      "visible": true
+    },
+    {
+      "title": "Экологическая инициатива «Разделяй и умножай»",
+      "category": "Грамота",
+      "file": "./awards/Грамота Разделяй и умножай.pdf",
+      "icon": "recycle",
+      "order": 40,
+      "visible": true
+    },
+    {
+      "title": "Акция «Всемирный день мытья рук»",
+      "category": "Лауреат",
+      "file": "./awards/Лауреат Акции Всемирный день мытья рук.pdf",
+      "icon": "hands-clapping",
+      "order": 50,
+      "visible": true
+    },
+    {
+      "title": "Всероссийский конкурс «Родина»",
+      "category": "Победитель",
+      "file": "./awards/Победитель Всероссийского конкурса Родина.pdf",
+      "icon": "trophy",
+      "order": 60,
+      "visible": true
+    },
+    {
+      "title": "Всероссийский День Эколят",
+      "category": "Участник",
+      "file": "./awards/Участник Всероссийского Дня Эколят.pdf",
+      "icon": "leaf",
+      "order": 70,
+      "visible": true
+    },
+    {
+      "title": "За труд и заботу о детях",
+      "category": "Благодарность",
+      "file": "./awards/Благодарность За труд и заботу о детях.pdf",
+      "icon": "hands-praying",
+      "order": 80,
+      "visible": true
+    },
+    {
+      "title": "Акция «Всемирный день мытья рук — 2025», группа «Светлячки»",
+      "category": "Диплом лауреата",
+      "file": "./awards/Диплом - Гигиена рук всегда важна.png",
+      "icon": "hand-soap",
+      "order": 90,
+      "visible": true
+    },
+    {
+      "title": "Всемирный день мытья рук",
+      "category": "Диплом",
+      "file": "./awards/Диплом - Всемирный день мытья рук.pdf",
+      "icon": "hand-soap",
+      "order": 100,
+      "visible": true
+    },
+    {
+      "title": "Осенний флорариум",
+      "category": "Диплом",
+      "file": "./awards/Диплом - Осенний флорариум.pdf",
+      "icon": "plant",
+      "order": 110,
+      "visible": true
+    }
+  ]
+}

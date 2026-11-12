@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.astro/
+.DS_Store
+Thumbs.db
+# исходники DOCX держим локально: публикуются только PDF из public/
+sources-docx/
+
+# Оригиналы остаются локально, на сайт идут копии из pupil-achievements.
+public/achievements of pupils/

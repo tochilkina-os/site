@@ -1,0 +1,32 @@
+# Continuity Ledger
+
+- Goal (incl. success criteria): Maintain and polish the professional portfolio website of Olga Sergeevna Tochilkina, preschool educator. Success is measured by a functional, visually stunning, luxury-minimalist interface with comprehensive educational and professional sections.
+- Constraints/Assumptions:
+    - Keep design clean and elegant.
+    - Fully responsive UI.
+    - Protect child privacy in images.
+    - Standard Russian language communication.
+    - Site is a showcase for attestation, not a conversion funnel: no competing calls to action.
+- Key decisions:
+    - Astro static build (base `/site`), GitHub Pages via Actions. No runtime framework on the client.
+    - One typeface (self-hosted Manrope), Phosphor inline SVG icons. No emoji as UI icons.
+    - Design system follows the `landing-page-design` skill: Tailwind type scale, fixed spacing steps, flat backgrounds, hero gradient only on the heading, motion on the shared cubic-bezier curve.
+    - Documents stay in `src/data/*.json`, edited through Decap CMS at `/admin/`.
+    - Child photos kept, but as a compact unnamed strip with a consent note.
+- State:
+    - Done: hero, approach, process, tagline reveal, results with year switcher, documents archive, group gallery, parents materials, FAQ, contact form, 404, privacy policy, SEO/OG/JSON-LD, favicon, sitemap, robots.
+    - Now: контент за ноябрь 2026 добавлен в обе ветки. Сертификаты 21 → 25 (+Запуск речи через игру, Как сотрудничать с семьёй.jpg, Вебинар журнала «Обруч» и МШЗД, Роль привязанности в жизни ребёнка). Награды 7 → 9 (+За труд и заботу о детях, Диплом лауреата «Гигиена рук всегда важна».png). Памятки 6 → 8 (+Как привести ребёнка в ясли без слёз, Как приучить ребёнка к горшку; PDF собраны из DOCX через Word COM). Счётчики в Hero, Documents, Parents, FAQ и JSON-LD теперь считаются из `src/data/*.json`.
+    - Два дерева: опубликованный сайт — статика в корне `main` (Pages build_type legacy, PR #2 `content-nov-2026`), новая версия — Astro в `redesign` (PR #1). Файлы в `public/` общие.
+    - Опубликовано: **https://o-tochilkina.github.io/** — репозиторий `o-tochilkina/o-tochilkina.github.io`, Pages из `main` / `/`, статика без сборки, `.nojekyll`. Ветка-источник `content-nov-2026`, коммиты `995b4e4` (контент) + `374d6c3` (title/description/OG, `.nojekyll`). Доступ к новому аккаунту — через `gh auth` (аккаунт `o-tochilkina` в keyring).
+    - Старые адреса: `tochilkina-os.github.io/site/` — недоступен без входа в аккаунт `tochilkina-os` (пароля нет, вход только через Google/Apple), PR #2 и #1 висят открытыми. `tochilking.github.io/site/` — форк, ещё жив, но не канонический.
+    - Приватность: из публикации убраны все DOCX (17 файлов). Мониторинг и отчёты по самообразованию переведены в PDF (9 файлов, собраны Word'ом с открытием OpenAndRepair — два файла иначе не читаются), ФИО коллеги сокращено до «Миронова Н. А.», метаданные PDF очищены. Исходники ушли в `sources-docx/` (в `.gitignore`). Репозиторий `o-tochilkina.github.io` перезалит одним коммитом, чтобы старые DOCX не достались из истории.
+    - Next: перенести Astro-редизайн на корень (`base: '/'`) и опубликовать вместо статики; настроить вход в `tochilkina-os` или закрыть его PR.
+- Open questions:
+    - Decap CMS GitHub OAuth mediator is still not configured.
+- Working set:
+    - `src/pages/index.astro`
+    - `src/layouts/Base.astro`
+    - `src/components/*.astro`
+    - `src/styles/{tokens,base,site}.css`
+    - `src/scripts/site.js`
+    - `src/data/*.json`
